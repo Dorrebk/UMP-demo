@@ -1,0 +1,302 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>The Editorial Intelligence - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                colors: {
+                  "secondary-fixed-dim": "#ffb1c8",
+                  "outline": "#8f7065",
+                  "on-tertiary-fixed-variant": "#00497c",
+                  "secondary-container": "#feadc5",
+                  "inverse-surface": "#2f3130",
+                  "secondary": "#8b4a60",
+                  "surface-container-high": "#e9e8e7",
+                  "primary-fixed": "#ffdbcd",
+                  "surface-container": "#eeeeed",
+                  "tertiary": "#0061a2",
+                  "on-primary-fixed-variant": "#7e2c00",
+                  "on-secondary-fixed-variant": "#6f3348",
+                  "surface-dim": "#dadad9",
+                  "on-background": "#1a1c1c",
+                  "on-primary-container": "#541b00",
+                  "on-secondary-container": "#7a3d52",
+                  "inverse-on-surface": "#f1f0f0",
+                  "background": "#faf9f8",
+                  "on-tertiary-container": "#003053",
+                  "on-tertiary": "#ffffff",
+                  "on-error": "#ffffff",
+                  "surface-container-low": "#f4f3f2",
+                  "on-primary-fixed": "#360f00",
+                  "on-surface": "#1a1c1c",
+                  "on-error-container": "#93000a",
+                  "surface-variant": "#e3e2e1",
+                  "error": "#ba1a1a",
+                  "surface": "#faf9f8",
+                  "secondary-fixed": "#ffd9e2",
+                  "primary-fixed-dim": "#ffb597",
+                  "surface-container-lowest": "#ffffff",
+                  "on-secondary": "#ffffff",
+                  "on-primary": "#ffffff",
+                  "surface-container-highest": "#e3e2e1",
+                  "tertiary-fixed-dim": "#9dcaff",
+                  "surface-tint": "#a53d00",
+                  "inverse-primary": "#ffb597",
+                  "on-surface-variant": "#5a4137",
+                  "primary": "#a53d00",
+                  "outline-variant": "#e3bfb1",
+                  "error-container": "#ffdad6",
+                  "tertiary-fixed": "#d1e4ff",
+                  "on-tertiary-fixed": "#001d35",
+                  "on-secondary-fixed": "#39081d",
+                  "primary-container": "#ff6200",
+                  "surface-bright": "#faf9f8",
+                  "tertiary-container": "#009afc"
+                },
+                fontFamily: {
+                  "headline": ["Plus Jakarta Sans"],
+                  "body": ["Inter"],
+                  "label": ["Inter"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+              },
+            },
+          }
+        </script>
+    <style>
+          .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+          }
+          .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(26, 28, 28, 0.06);
+          }
+          .orange-gradient-btn {
+            background: linear-gradient(135deg, #a53d00 0%, #ff6200 100%);
+          }
+        </style>
+    </head>
+    <body class="bg-background font-body text-on-surface">
+    <!-- Sidebar Component (The Anchor) -->
+    <aside class="h-screen w-64 fixed left-0 top-0 bg-[#faf9f8] dark:bg-zinc-950 flex flex-col p-6 space-y-8 z-50">
+    <div class="flex items-center gap-2 mb-4">
+    <img alt="ING Logo" class="w-10 h-10 rounded-lg" data-alt="Stylized graphic logo for ING banking with orange lion symbol and clean typography on a white square background" src="https://i.ibb.co/zH79SY8C/ING-logo.png" style="">
+    <span class="text-2xl font-black text-[#ff6200] tracking-tighter font-headline" style="">ING</span>
+    </div>
+    <nav class="flex-1 space-y-2">
+    <a class="flex items-center gap-3 px-4 py-3 text-[#ff6200] bg-[#ffffff] dark:bg-zinc-800 rounded-xl font-bold transition-all editorial-shadow" href="#" style=""><span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">home</span><span class="font-headline tracking-tight" style="">Home</span></a>
+    <a class="flex items-center gap-3 px-4 py-3 text-[#5a4137] dark:text-zinc-400 hover:text-[#ff6200] hover:bg-[#ffffff] dark:hover:bg-zinc-800 hover:translate-x-1 duration-200 transition-all font-semibold tracking-tight font-headline" href="#" style=""><span class="material-symbols-outlined" style="">dashboard</span><span class="" style="">Dashboard</span></a>
+    <a class="flex items-center gap-3 px-4 py-3 text-[#5a4137] dark:text-zinc-400 hover:text-[#ff6200] hover:bg-[#ffffff] dark:hover:bg-zinc-800 hover:translate-x-1 duration-200 transition-all font-semibold tracking-tight font-headline" href="#" style=""><span class="material-symbols-outlined" style="">insights</span><span class="" style="">Insights</span></a>
+    <a class="flex items-center gap-3 px-4 py-3 text-[#5a4137] dark:text-zinc-400 hover:text-[#ff6200] hover:bg-[#ffffff] dark:hover:bg-zinc-800 hover:translate-x-1 duration-200 transition-all font-semibold tracking-tight font-headline" href="#" style=""><span class="material-symbols-outlined" style="">person</span><span class="" style="">My profile</span></a>
+    </nav>
+    <div class="pt-6 border-t border-surface-container-high">
+    <div class="flex items-center gap-3 p-2">
+    <img alt="Emma" class="w-10 h-10 rounded-full bg-primary-container/20" data-alt="Professional headshot of a young woman with a friendly expression, soft studio lighting, clean office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHhehf694eEO8GL-urYmGzYGpF_Y66HrbnmInI0fQa2lmA4bvD_o-M_cbAZIbt0aPMOciUVqDTDnxiB5pec5MlhHCdYsB0PNldBrH5_PBvuPaTHc7asq9FozrMzBEI1wCDZl-Ew_J9X5-RIQ8yLNs5uPGFiLG0offLZaXU-KJEHvAkJlbJcmBZ1klSpN8aGqfM11OKKjEfN7RtBrk3uVjuctbYl0ZPSc_N8dRCgcvkXYdfDEifCyTAh0mxkhs1zWSUq0yIOjxqyg" style="">
+    <div>
+    <p class="text-sm font-bold font-headline" style="">Emma Curator</p>
+    <p class="text-xs text-on-surface-variant" style="">Editorial Lead</p>
+    </div>
+    </div>
+    </div>
+    </aside>
+    <!-- Main Content Area -->
+    <main class="ml-64 min-h-screen">
+    <!-- Top App Bar -->
+    <header class="fixed top-0 right-0 left-64 z-40 bg-[#faf9f8]/80 dark:bg-zinc-950/80 backdrop-blur-xl h-20 px-10 flex justify-between items-center">
+    <div class="flex items-center gap-4">
+    <h1 class="font-headline text-sm font-bold text-on-surface-variant tracking-wide" style="">THE EDITORIAL INTELLIGENCE</h1>
+    </div>
+    <div class="flex items-center gap-6">
+    <div class="relative flex items-center bg-surface-container-low rounded-full px-4 py-2 w-64 focus-within:ring-2 focus-within:ring-[#ff6200] transition-all">
+    <span class="material-symbols-outlined text-on-surface-variant mr-2" style="">search</span>
+    <input class="bg-transparent border-none focus:ring-0 text-sm w-full p-0" placeholder="Search insights..." type="text">
+    </div>
+    <div class="flex items-center gap-4">
+    <span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-[#ff6200]" style="">notifications</span>
+    <span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-[#ff6200]" style="">help_outline</span>
+    </div>
+    </div>
+    </header>
+    <!-- Scrollable Content -->
+    <div class="pt-32 pb-24 px-12 max-w-7xl">
+    <!-- Hero Section -->
+    <section class="mb-16">
+    <h2 class="font-headline text-6xl font-extrabold text-on-surface mb-2 tracking-tighter" style="">Welcome back, Emma</h2>
+    <p class="text-on-surface-variant text-lg max-w-2xl" style="">Your creative pipeline is performing 12% above quarterly targets. Ready to start something new?</p>
+    </section>
+    <!-- Start Creating Section (Bento Row) -->
+    <section class="mb-20">
+    <div class="flex items-center justify-between mb-8">
+    <h3 class="font-headline text-2xl font-bold tracking-tight" style="">Start creating</h3>
+    <a class="text-[#ff6200] text-sm font-bold flex items-center gap-1 hover:underline" href="https://experience.adobe.com/#/@accenture-partner/so:mrmworkfront-Production/workfront/dashboard/69b90cc30002501985ef921e9c0a91fd/view?source-id=unifiedShareMFE" style="">
+                            View templates <span class="material-symbols-outlined text-sm" style="">arrow_forward</span>
+    </a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+    <!-- Card 1 -->
+    <a class="group bg-surface-container-lowest p-6 rounded-xl editorial-shadow hover:-translate-y-1 transition-all flex flex-col justify-between aspect-square" href="https://experience.adobe.com/#/@accenture-partner/so:mrmworkfront-Production/workfront/dashboard/69b90cc30002501985ef921e9c0a91fd/view?source-id=unifiedShareMFE" style="">
+    <div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-[#ff6200] mb-4">
+    <span class="material-symbols-outlined" style="">insights</span>
+    </div>
+    <p class="font-headline font-bold text-on-surface group-hover:text-[#ff6200] leading-tight" style="">Create a strategy or market insight</p>
+    </a>
+    <!-- Card 2 -->
+    <a class="group bg-surface-container-lowest p-6 rounded-xl editorial-shadow hover:-translate-y-1 transition-all flex flex-col justify-between aspect-square" href="https://experience.adobe.com/#/@accenture-partner/so:mrmworkfront-Production/workfront/dashboard/69b90cc30002501985ef921e9c0a91fd/view?source-id=unifiedShareMFE" style="">
+    <div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-[#ff6200] mb-4">
+    <span class="material-symbols-outlined" style="">assignment</span>
+    </div>
+    <p class="font-headline font-bold text-on-surface group-hover:text-tertiary leading-tight" style="">Create a brief</p>
+    </a>
+    <!-- Card 3 -->
+    <a class="group bg-surface-container-lowest p-6 rounded-xl editorial-shadow hover:-translate-y-1 transition-all flex flex-col justify-between aspect-square" href="https://experience.adobe.com/#/@accenture-partner/so:mrmworkfront-Production/workfront/dashboard/69b90cc30002501985ef921e9c0a91fd/view?source-id=unifiedShareMFE" style="">
+    <div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-[#ff6200] mb-4">
+    <span class="material-symbols-outlined" style="">lightbulb</span>
+    </div>
+    <p class="font-headline font-bold text-on-surface group-hover:text-secondary leading-tight" style="">Generate campaign concepts</p>
+    </a>
+    <!-- Card 4 -->
+    <a class="group bg-surface-container-lowest p-6 rounded-xl editorial-shadow hover:-translate-y-1 transition-all flex flex-col justify-between aspect-square" href="https://experience.adobe.com/#/@accenture-partner/so:mrmworkfront-Production/workfront/dashboard/69b90cc30002501985ef921e9c0a91fd/view?source-id=unifiedShareMFE" style="">
+    <div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-[#ff6200] mb-4">
+    <span class="material-symbols-outlined" style="">layers</span>
+    </div>
+    <p class="font-headline font-bold text-on-surface group-hover:text-[#ff6200] leading-tight" style="">Produce assets at scale</p>
+    </a>
+    <!-- Card 5 -->
+    <a class="group bg-surface-container-lowest p-6 rounded-xl editorial-shadow hover:-translate-y-1 transition-all flex flex-col justify-between aspect-square" href="https://experience.adobe.com/#/@accenture-partner/so:mrmworkfront-Production/workfront/dashboard/69b90cc30002501985ef921e9c0a91fd/view?source-id=unifiedShareMFE" style="">
+    <div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-[#ff6200] mb-4">
+    <span class="material-symbols-outlined" style="">language</span>
+    </div>
+    <p class="font-headline font-bold text-on-surface group-hover:text-primary leading-tight" style="">Localise assets</p>
+    </a>
+    </div>
+    </section>
+    <!-- In Progress Section -->
+    <section>
+    <div class="flex items-center justify-between mb-8">
+    <h3 class="font-headline text-2xl font-bold tracking-tight" style="">In progress</h3>
+    <div class="flex gap-2">
+    <button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" style="">
+    <span class="material-symbols-outlined" style="">chevron_left</span>
+    </button>
+    <button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" style="">
+    <span class="material-symbols-outlined" style="">chevron_right</span>
+    </button>
+    </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Project Card 1 -->
+    <div class="bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow group">
+    <div class="h-48 relative overflow-hidden">
+    <img alt="Spring Product Launch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Vibrant lifestyle photograph showing modern colorful sneakers and athletic wear in a minimalist studio setting with soft pink and green lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0BgISspgFaDjvPNm1q1RpvO80oCqpUA122U6Sbx3ktOnH89F1zFfh0xLPM1jCc_nrNHkqfiM_IehOPfD6gcRTz36_-V15ZAuR5eoDr1BNYVRNcp8hzz31DWdAm9TeB-tYw-c18t8fedotjpSgX8w5RqeOohTXil9CfU-5WZvAv5Ppo198uQFg04IlSzA2Z9cpRYAKgW6ps_081d8zJ3YxYmLATaQAaPg0gjGfjVHWy7MLUn2sYKKdHgIpaHf9FFp9supqZfI1wg" style="">
+    <div class="absolute top-4 left-4">
+    <span class="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-[#ff6200]" style="">Marketing</span>
+    </div>
+    </div>
+    <div class="p-6">
+    <div class="flex justify-between items-start mb-4">
+    <h4 class="font-headline font-bold text-xl" style="">Spring Product Launch</h4>
+    <span class="text-xs font-bold text-on-surface-variant bg-surface-container px-2 py-1 rounded" style="">Q2 2024</span>
+    </div>
+    <div class="space-y-4">
+    <div class="flex items-center justify-between text-sm">
+    <span class="text-on-surface-variant" style="">Progress</span>
+    <span class="font-bold text-[#ff6200]" style="">75%</span>
+    </div>
+    <div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+    <div class="h-full bg-[#ff6200] rounded-full" style="width: 75%"></div>
+    </div>
+    <div class="flex justify-between items-center pt-2">
+    <div class="flex -space-x-2">
+    <img alt="Team Member" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Avatar of a male team member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMa9y7nj9IRauEIiiduVmtSmp2BC65v5NdtAlZvigrWTNpekDmcygMoDZ0Yn2F9ZDiN1vxTujekzwSj1ytz3Igh5YksPmxG65iv68sje8f8CNi5UIBlAPO5Hc70MpfswyAW9mES1of7nFIB5c3sXakvdrwv3wCLKwx-Wo3-uxZM-F_p5mrgstyhRWlYSWa-uUCGNVYo8WnCagFAVAU6vI92gxmqEEowYy8yFXGxmIDlt52HuXGheZo-OyT8YN3rM3HU7XTOnNRQw" style="">
+    <img alt="Team Member" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Avatar of a female team member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_jROdKxy8A-HWvNmtvbThdOaCHhXBjNulsMUOgtEqyW3DHLehiVBlOLetSy6_BfbMleYOA0OmAYjhFuA7XQtezBhx9CFvRHSZQqfw_teGD3qLmgv6Fxo54-KfW156eDCsNu0P1QQFjyKkKWB775S3SPzirQB1YHw84aeMurgvg-DljVeOy9efd4PYbN87jpYrxEQP9ho7Yo25rJKr07xdZ_83JjsyY97IIc_gq72yNz4Srl3aKj7gW_pSNnksA3ZfRhackOQguQ" style="">
+    <div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container-high flex items-center justify-center text-[10px] font-bold text-on-surface-variant" style="">+3</div>
+    </div>
+    <button class="text-sm font-bold text-on-surface-variant hover:text-[#ff6200] flex items-center gap-1" style="">
+                                            Details <span class="material-symbols-outlined text-sm" style="">open_in_new</span>
+    </button>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Project Card 2 -->
+    <div class="bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow group">
+    <div class="h-48 relative overflow-hidden">
+    <img alt="Customer Retention Q1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close up of a digital tablet showing complex data visualizations and growth charts with professional lighting in a modern workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ_DkdTNkUx1l1cmdkDeIy2WuUZk6BIMfxRaotF1K7b5CdYL7VSVYW_d0z9vGwP61pkOEyc5diJI7bKZWhRxOFFU-J7avqC7UFEBQd5gwEDkkeHzBJdorhIA79WCOLHjJQbVywUiRsgZLX4tWNzz-DNoK1E1WTTX6NxaUvCS7fduvpk-Wdhtz7EJlSDY47CB0B2qhNgVXO1CfNyLIFUSMm1mwnNF1fGaB1A_25kPD3j1xYShmoJ3bWkxc-tLem7nLOKjqgVILcbg" style="">
+    <div class="absolute top-4 left-4">
+    <span class="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-tertiary" style="">Strategy</span>
+    </div>
+    </div>
+    <div class="p-6">
+    <div class="flex justify-between items-start mb-4">
+    <h4 class="font-headline font-bold text-xl" style="">Customer Retention Q1</h4>
+    <span class="text-xs font-bold text-on-surface-variant bg-surface-container px-2 py-1 rounded" style="">Active</span>
+    </div>
+    <div class="space-y-4">
+    <div class="flex items-center justify-between text-sm">
+    <span class="text-on-surface-variant" style="">Progress</span>
+    <span class="font-bold text-tertiary" style="">42%</span>
+    </div>
+    <div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+    <div class="h-full bg-tertiary rounded-full" style="width: 42%"></div>
+    </div>
+    <div class="flex justify-between items-center pt-2">
+    <div class="flex -space-x-2">
+    <img alt="Team Member" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Avatar of a professional male analyst" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoHyZ19WB0h9iRZskRedh_ohdWEgIyG4Kvi5KJCkT04E2gSLuKOuHH5zyc4ihL2Yw01ZZlZSGar4TwN_ubcIF1WKLcYsJcIzFa0xfG45wlKESYULBiNHC-3BUrs5xXygA9tzqPhR8Ho8dgAgqfdU0-L_H88jCYOglkk4nC4kL_2Dp_EUB2FBycR-MCJul4MdghUpT4df4gRGwzFm1v7Yx3ExYmNrIQ_MfbpOb-6jpelHhZK1Arb2ovOO8fhsnf7gYTQaUeIHYZjw" style="">
+    <img alt="Team Member" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Avatar of a creative professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEhh_FWz2ihjFsbNVoNvOn3FBkxP4VmMF1HwRLEuNs6mg28w1HJFNq_nB6_PqvI_xmMToi_mevGm4pmmPaqRA7VIz54E7_9jJ4LQnpAy01ZD1l5jBZZ5X1xBkIYT2s9nXoEdnf-JjGi_Llj0PqlAyxhPvAqh5fNFALXYVMIcC59eu8ochEu6Lx3URlFkkcKbisa64wiji38hUR8lIbjj2GAiIRWzesdKWDOZGjX_yo26SjaBWTvDYS3kBQmfHioqA1JtAUVjhBAg" style="">
+    </div>
+    <button class="text-sm font-bold text-on-surface-variant hover:text-tertiary flex items-center gap-1" style="">
+                                            Details <span class="material-symbols-outlined text-sm" style="">open_in_new</span>
+    </button>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Project Card 3 -->
+    <div class="bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow group">
+    <div class="h-48 relative overflow-hidden">
+    <img alt="Brand Awareness 2026" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Abstract futuristic visualization of digital connections and glowing network lines in a deep blue and orange palette representing brand identity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1clu5bHKfBJOGuqs5v_zH-6edGxWWGHiHlE-0rvWnccJcbjiiZaCvOyKOVT4j8kmkWEQe2jX-1Q7FNZ4111h2BLrckH2Cx5i5jXApDkOPcavN252pTlQ2yjcSZ5iT-Dgys8SC_MmLWP-7hPgAhw7em5hmtaDWPBXKJxUkLw84yKlLfrMwM9ZC_3CWKF9TxGYInF5Fy1oZ0SHq1Rofj6rMMSuJEhmD0rXjrYfaci58HCjWeq9aMnkl2hmx6de9psyy948-1fwoBw" style="">
+    <div class="absolute top-4 left-4">
+    <span class="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-secondary" style="">Branding</span>
+    </div>
+    </div>
+    <div class="p-6">
+    <div class="flex justify-between items-start mb-4">
+    <h4 class="font-headline font-bold text-xl" style="">Brand Awareness 2026</h4>
+    <span class="text-xs font-bold text-on-surface-variant bg-surface-container px-2 py-1 rounded" style="">Planned</span>
+    </div>
+    <div class="space-y-4">
+    <div class="flex items-center justify-between text-sm">
+    <span class="text-on-surface-variant" style="">Progress</span>
+    <span class="font-bold text-secondary" style="">10%</span>
+    </div>
+    <div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+    <div class="h-full bg-secondary rounded-full" style="width: 10%"></div>
+    </div>
+    <div class="flex justify-between items-center pt-2">
+    <div class="flex -space-x-2">
+    <img alt="Team Member" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Avatar of a female brand director" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzMa-KuTXLZxwoBQ_e7-WeX7pkoguNL-lzhSMlrG9WmhMP8nAbLEcSEJJxg_-YEJsWrUizKAzJyIlpBU8TxYlm-hKQSxdfpwGfOpRCCp3wPFQn_0iaBxZ5mD0_wTl5eh9jvidEWXRbK-CKOZ6PsFKMWt-1zQNTzPHzygZuOAaPGiO3ft1Tz48o8_3ugCOpVaKNvXw_CXLNOrxBfRh-0tBiBzHHZuW0RlqCxna-TNAeeAvss1JTrgk5q2XgSJW3qCInQy6fSlFAWA" style="">
+    </div>
+    <button class="text-sm font-bold text-on-surface-variant hover:text-secondary flex items-center gap-1" style="">
+                                            Details <span class="material-symbols-outlined text-sm" style="">open_in_new</span>
+    </button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    </div>
+    <!-- AI Insights Sidebar Prompt / Content (Editorial Touch) -->
+    <div class="fixed bottom-10 right-10 z-50">
+    <button class="orange-gradient-btn w-14 h-14 rounded-full flex items-center justify-center text-white shadow-2xl hover:scale-110 active:scale-95 transition-all" style="">
+    <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">auto_awesome</span>
+    </button>
+    </div>
+    </main>
+    </body></html>
