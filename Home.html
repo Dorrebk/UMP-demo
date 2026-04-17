@@ -160,6 +160,15 @@
     </section>
     </div>
     </main>
+    <!-- Writer Agent Floating Button -->
+    <button onclick="window.open('https://app.writer.com/organization/575164/team/766999/writer-agent/thread/0f7c1a66-41c4-4e2a-85a6-9810752d701f','writerAgent','width=1000,height=750,left=200,top=100')" class="fixed bottom-8 right-8 z-40 flex items-center gap-2 px-5 py-3 rounded-full shadow-lg orange-gradient-btn text-white font-headline font-bold text-sm hover:scale-105 transition-transform">
+      <span class="material-symbols-outlined" style="font-size:20px;">smart_toy</span>
+      AI Assistant
+    </button>
+    <button onclick="document.getElementById('writer-agent-iframe-modal').classList.remove('hidden')" class="fixed bottom-8 right-48 z-40 flex items-center gap-2 px-5 py-3 rounded-full shadow-lg bg-white border border-[#ff6200] text-[#ff6200] font-headline font-bold text-sm hover:scale-105 transition-transform">
+      <span class="material-symbols-outlined" style="font-size:20px;">chat</span>
+      AI Assistant (inline)
+    </button>
     <!-- Listen for Workfront form submission and redirect -->
     <script>
       window.addEventListener('message', function(event) {
@@ -206,4 +215,13 @@
     <iframe style="background: white;border-radius: 8px; border: none; box-shadow: 5px 5px 24px 0px #0000001F;" allow="microphone" src="https://embed.writer.com/research-assistant/7TKxP383XTGRq5QBUMkR6LlbeyX7rL27VFMKLUijd3M" width="800" height="600"></iframe>
     </div>
     </div>
-    </body></html>
+    <!-- Writer Agent Iframe Modal -->
+    <div id="writer-agent-iframe-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+    <div class="bg-white rounded-xl shadow-2xl overflow-hidden relative" style="width:920px;">
+    <button onclick="document.getElementById('writer-agent-iframe-modal').classList.add('hidden')" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 z-10">
+    <span class="material-symbols-outlined">close</span>
+    </button>
+    <iframe style="background: white;border-radius: 8px; border: none; box-shadow: 5px 5px 24px 0px #0000001F;" allow="microphone" src="https://embed.writer.com/text-generation/fLtqpLatcKOACrUY-6QfG7aQWYAmtTXFARFjTJjvHiE" width="800" height="600"></iframe>
+    </div>
+    </div>
+</body></html>
