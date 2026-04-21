@@ -178,16 +178,28 @@
     <!-- Adobe Express Embed SDK -->
     <script>
       (async () => {
-        const ccEverywhere = await window.CCEverywhere.initialize({
-          clientId: 'f739f4e0c9674ea99605c8c6251eae50',
-          appName: 'ING'
-        });
-        document.getElementById('adobe-express-btn').addEventListener('click', () => {
-          ccEverywhere.editor.create(
-            { canvasSize: 'FacebookPost' },
-            { locale: 'en_US' }
-          );
-        });
+        try {
+          const { editor } = await window.CCEverywhere.initialize({
+            clientId: 'f739f4e0c9674ea99605c8c6251eae50',
+            appName: 'ING'
+          });
+          const appConfig = {
+            callbacks: {
+              onCancel: () => {},
+              onPublish: (intent, publishParams) => {
+                console.log('Published:', publishParams);
+              },
+              onError: (err) => {
+                console.error('Adobe Express error:', err);
+              }
+            }
+          };
+          document.getElementById('adobe-express-btn').addEventListener('click', () => {
+            editor.create({}, appConfig);
+          });
+        } catch (e) {
+          console.error('Adobe Express SDK init failed:', e);
+        }
       })();
     </script>
     <!-- Listen for Workfront form submission and redirect -->
