@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"></script>
     <script id="tailwind-config">
           tailwind.config = {
             darkMode: "class",
@@ -160,6 +161,11 @@
     </section>
     </div>
     </main>
+    <!-- Adobe Express Floating Button -->
+    <button id="adobe-express-btn" class="fixed bottom-8 left-8 z-40 flex items-center gap-2 px-5 py-3 rounded-full shadow-lg bg-[#FF0000] text-white font-headline font-bold text-sm hover:scale-105 transition-transform">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.4 2H9.6L2 12l7.6 10h4.8L22 12 14.4 2Z" fill="white"/></svg>
+      Create in Express
+    </button>
     <!-- Writer Agent Floating Button -->
     <button onclick="window.open('https://app.writer.com/organization/575164/team/766999/writer-agent/thread/0f7c1a66-41c4-4e2a-85a6-9810752d701f','writerAgent','width=1000,height=750,left=200,top=100')" class="fixed bottom-8 right-8 z-40 flex items-center gap-2 px-5 py-3 rounded-full shadow-lg orange-gradient-btn text-white font-headline font-bold text-sm hover:scale-105 transition-transform">
       <span class="material-symbols-outlined" style="font-size:20px;">smart_toy</span>
@@ -169,6 +175,21 @@
       <span class="material-symbols-outlined" style="font-size:20px;">chat</span>
       AI Assistant (inline)
     </button>
+    <!-- Adobe Express Embed SDK -->
+    <script>
+      (async () => {
+        const ccEverywhere = await window.CCEverywhere.initialize({
+          clientId: 'f739f4e0c9674ea99605c8c6251eae50',
+          appName: 'ING'
+        });
+        document.getElementById('adobe-express-btn').addEventListener('click', () => {
+          ccEverywhere.editor.create(
+            { canvasSize: 'FacebookPost' },
+            { locale: 'en_US' }
+          );
+        });
+      })();
+    </script>
     <!-- Listen for Workfront form submission and redirect -->
     <script>
       window.addEventListener('message', function(event) {
